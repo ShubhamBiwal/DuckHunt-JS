@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Villa', sans-serif;
+
 }
 h3{
     color: white;
@@ -12,12 +14,10 @@ h2{
     color: white;
 }
 
-
 body{
     height: 100%;
     overflow-y: hidden;
     margin: 0;
-    font-family: 'Villa', sans-serif;
     user-select: none;
     content: url("../resources/sprites/duck/hit.png") url("../resources/sprites/duck/flyrightup.gif") url("../resources/sprites/duck/flyrightdown.gif") url("../resources/sprites/duck/flyleftup.gif") url("../resources/sprites/duck/flyleftdown.gif") url("../resources/sprites/duck/flyright.gif") url("../resources/sprites/duck/flyleft.gif") url("../resources/sprites/duck/falling.gif") ;
 }
