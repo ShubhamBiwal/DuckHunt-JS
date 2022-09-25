@@ -1,10 +1,13 @@
-@import url('http://fonts.cdnfonts.com/css/villa');
+@font-face {
+    font-family: 'Villa';
+    src: url(/Villa.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Villa', sans-serif;
-
 }
 h3{
     color: white;
