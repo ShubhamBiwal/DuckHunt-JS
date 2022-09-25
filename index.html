@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <title>Duck Hunt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/sprites/duck/png/favicon.ico" />
+    <!-- bootstrap cdn link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- custom css files -->
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="Styles/bar.css">
+    <link rel="stylesheet" href="Styles/overlays.css">
+    <link rel="stylesheet" href="Styles/startScreen.css">
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <audio src="/resources/sounds/bg-audio.mp3" autoplay></audio>
+    <div id="startScreen">
+        <div class="startScreen__content">
+            <br>
+            <br>
+            <div class="startScreen__content__box" onclick="launchApplication()">
+                <h2 id="startButton">START GAME</h2>
+            </div>
+            <div class="startScreen__content__box" id="modeSelect">
+                <div class="arrow" id="prevMode">&#60;</div>
+                <div class="selection">CLASSIC</div>
+                <div class="arrow" id="nextMode">&#62;</div>
+            </div>
+        </div>
+        <div id="startScreenFooter">
+            <p>Created By @ Shubham Kumar & Sagar Chauhan</p>
+        </div>
+    </div>
+
+
+    <div id="sky" class="sky">
+
+        <div class="comboMessage"></div>
+
+        <div class="dog" id="dog1"></div>
+
+        <div class="dog" id="dog2"></div>
+
+        <div id="pointsCounter">
+            <h2 id="levelCount">1</h2>
+        </div>
+
+        <div class="bushes">
+            <div class="barRow">
+                <div class="rowCell ammunitionCell" id="shots">
+                    <div class="ammunitionCell__info">
+                        <h2 id="ammunitionAmmount">0</h2>
+                        <h2>SHOT</h2>
+                    </div>
+                    <div class="ammunitionCell__gunIcon">
+                        <img id="gunIcon" src="../resources/sprites/weapons/shotgun.png" alt="">
+                    </div>
+                </div>
+
+                <div class="rowCell" id="hit" style="width:40%;">
+                    <div class="lifesIcons">
+                        <img id="life1" src="../resources/sprites/scoreImages/life.png" alt="">
+                        <img id="life2" src="../resources/sprites/scoreImages/life.png" alt="">
+                        <img id="life3" src="../resources/sprites/scoreImages/life.png" alt="">
+                    </div>
+                    <div class="progress">
+                        <div id="roundProgress" class="progress-bar progress-bar-striped active" role="progressbar"
+                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                            0%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rowCell scoreCell" id="score">
+                    <h2 id="scoreCount">0</h2>
+                    <h2>SCORE</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="levelBox">
+        <h3 id="levelBoxP">LEVEL</h3>
+    </div>
+
+    <div id="shootBlocker"></div>
+
+    <div id="overlay">
+        <div class="resultsBox">
+            <h3 style="color:rgb(0, 225, 255)">Game Over!</h3>
+            <table>
+                <tr>
+                    <td>YOUR POINTS</td>
+                    <td id="pointsSummary"></td>
+                </tr>
+                <tr>
+                    <td>ROUND</td>
+                    <td id="roundSummary"></td>
+                </tr>
+                <tr>
+                    <td>SUCCESSFUL SHOTS</td>
+                    <td id="shotsSummary"></td>
+                </tr>
+                <tr>
+                    <td>ACCURACY</td>
+                    <td id="accuracySummary"></td>
+                </tr>
+
+            </table>
+
+            <h3 id="playAgainButton" class="cursorChange" onClick="window.location.reload()">PLAY AGAIN</h3>
+
+        </div>
+    </div>
+
+    <script src="../JS/PointsHandler.js" defer="true"></script>
+    <script src="../JS/DucksHandler.js" defer="true"></script>
+    <script src="../JS/Duck.js" defer="true"></script>
+    <script src="../JS/View.js" defer="true"></script>
+    <script src="../JS/ShotHandler.js" defer="true"></script>
+    <script src="../JS/Dog.js" defer="true"></script>
+    <script src="../JS/Game.js" defer="true"></script>
+    <script src="../JS/StartScreen.js" defer="true"></script>
+    <script src="../JS/Application.js" defer="true"></script>
+
+</body>
+
+</html>
